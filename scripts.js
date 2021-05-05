@@ -1,3 +1,8 @@
+//Goal of major project is to create a Connect 4 style game
+//-Make sure each player has a turn
+//-Make sure winner is decided when 4 chips are in a row 
+//-Make announcement for winner
+//-Reset game board through button
 // code adapted from: SteamCodeYT 
 $(document).ready(function() {
   var player = 1;
