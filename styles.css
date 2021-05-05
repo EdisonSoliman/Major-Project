@@ -1,5 +1,12 @@
 /* Title Design */
 
+body{
+  background-image: url("Table.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
 #connect h1 {
   font-family: 'Bungee Inline', cursive;
   color: black;
@@ -14,7 +21,7 @@
 
 /* Playboard */
 
-.grid {
+.board {
   display: grid;
   grid-template-columns: repeat(7, 140px);
   grid-template-rows: repeat(6, 140px);
