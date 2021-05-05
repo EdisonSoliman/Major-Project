@@ -7,6 +7,7 @@ $(document).ready(function() {
   colors[1] = "YELLOW";
   var count = 0;
 
+  // Set each circle to a background color dedecated to a player in order to act as game chips
   $(".circle").each(function() {
     $(this).attr("id", count);
     $(this).attr("data-player", 0);
@@ -17,7 +18,7 @@ $(document).ready(function() {
         $(this).css("background-color", colors[player]);
         $(this).attr("data-player", player);
         if (checkWin(player)) {
-          alert(colors[player] + " is the WINNER!");
+          alert(colors[player] + " is the WINNER!"); //If a winner is found announce who won
           winner = player;
         }
         player *= -1;
@@ -25,9 +26,12 @@ $(document).ready(function() {
     });
   });
 
+  //Reset the game board when button is clicked
+
   $("#reset").click(function() {
     clearBoard();
   });
+
 
   function clearBoard() {
     $(".circle").each(function() {
@@ -56,7 +60,7 @@ $(document).ready(function() {
 
   function checkWin(p) {
 
-    //check rows for winner
+    //check rows for 4 chips in a row to decide for a winner
     var chain = 0;
     for (var i = 0; i < 42; i += 7) {
       for (var j = 0; j < 7; j++) {
@@ -74,7 +78,7 @@ $(document).ready(function() {
       chain = 0;
     }
 
-    //check columns for winner
+    //check columns for 4 chips in a row to decide for a winner
     chain = 0;
     for (var i = 0; i < 7; i++) {
       for (var j = 0; j < 42; j += 7) {
@@ -92,7 +96,7 @@ $(document).ready(function() {
       chain = 0;
     }
 
-    //check diagonals for winner
+    //check diagonals for 4 chips in a row to decide for a winner
     var topLeft = 0;
     var topRight = topLeft + 3;
 

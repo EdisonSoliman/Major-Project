@@ -1,11 +1,13 @@
-/* Title Design */
+/* Table Background */
 
-body{
+body {
   background-image: url("Table.jpeg");
   background-repeat: no-repeat;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-size: cover;
 }
+
+/* Title Design */
 
 #connect h1 {
   font-family: 'Bungee Inline', cursive;
